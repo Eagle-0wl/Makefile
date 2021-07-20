@@ -13,11 +13,11 @@ $(LIB):$(OBJS)
 	$(CC) $(CFLAGS) $(LDFLAGS) -o $(LIB) $^
 
 install: $(LIB)
-	install -m 644 math_functions.h $(DESTDIR)/$(PREFIX)/include
-	install -m 644 libcalculator.so $(DESTDIR)/$(PREFIX)/include
+	install -m 644 math_functions.h $(DESTDIR)/$(PREFIX)/lib
+	install -m 644 libcalculator.so $(DESTDIR)/$(PREFIX)/lib
 uninstall:
 
 clean:
 	rm -f $(LIB) math_functions.o
 	
-#gcc -L/usr/include -Wall -o test main.c -lcalculator
+#gcc -L/usr/lib -Wall -o test main.c -lcalculator
